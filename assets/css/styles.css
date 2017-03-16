@@ -1,0 +1,111 @@
+#parent{
+    width: 340px;
+    height: 430px;
+    box-shadow: 0px 0px 16px black;
+    float: left;
+    position: relative;
+}
+.child{
+    width: 100px;
+    height: 100px;
+    float: left;
+    box-shadow: 7px 6px 10px burlywood;
+    cursor: pointer;
+    /* background-image: url(../images/x.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 91px;
+    margin-left: 10px;
+    margin-top: 10px;
+    user-select: none;
+}
+#midHeader, #topHeader, #bottomHeader, #connectionInfo{
+    width: 100%;
+    height: 30px;
+    box-shadow: 0px 0px 3px black;
+    text-align: center;
+    line-height: 28px;
+    font-weight: bold;
+}
+#welcomeMessage, #playingWith{
+    text-align: left;
+    left: 3%;
+    width: 44%;
+    position: absolute;
+}
+#playingWith{
+    font-size: 13px;
+    width: 50%;
+    left: 50%;
+}
+#gameId{
+    width: 50%;
+    float: left;
+}
+#totalPlayers, #playerCount{
+    width: 44%;
+    right: 3%;
+    position: absolute;
+    text-align: right;
+}
+#playerCount{
+    width: 94%;
+}
+.disabled .child {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+}
+#winner{
+    width: 250px;
+    height: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 0px 10px black, 2px 2px 5px red;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 3px 3px 4px darkred;
+    line-height: 100px;
+    display: none;
+}
+#lobby{
+    width: 340px;
+    height: 430px;
+    background-color: transparent;
+    position: absolute;
+    left: 340px;
+    box-shadow: 0px 0px 16px black;
+    overflow: scroll;
+}
+#container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 680px;
+    height: 430px;
+}
+#lobby p {
+    margin-left: 10px;
+}
+#playAgain{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 25px;
+    margin: auto;
+    display: none;
+    margin-top: 238px;
+    position: absolute;
+}

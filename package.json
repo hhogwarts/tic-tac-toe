@@ -1,0 +1,12 @@
+{
+  "name": "tic-tac-toe",
+  "author": "Kaushik",
+  "private": true,
+  "dependencies": {
+    "express": "latest",
+    "node-static": "latest",
+    "path": "latest",
+    "socket.io": "latest"
+  },
+  "description": "Tic Tac Toe"
+}

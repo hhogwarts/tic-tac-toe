@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            Tic Tac Toe
+        </title>
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <!--<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>-->
+    </head>
+    <body>
+      <!--<script>
+         var mainApp = angular.module("mainApp", []);
+         
+         mainApp.controller('studentController', function($scope) {
+            $scope.student = {
+               firstName: "Mahesh",
+               lastName: "Parashar",
+               
+               fullName: function() {
+                  var studentObject;
+                  studentObject = $scope.student;
+                  return studentObject.firstName + " " + studentObject.lastName;
+               }
+            };
+         });
+      </script>-->
+        <div id="container">
+            <div id='parent' class="disabled">
+                <!--<div ng-app = "mainApp" ng-controller = "studentController">
+                    <input type="checkbox" ng-model="isPrivate">Private</input>
+                    <input type="button" ng-model="createGame" value="Create Game"></input>
+                    <input type="button" ng-model="joinGame" value="Join"></input>
+                    <input type="text" ng-model="privateGameId" style="width: 100px"></input>
+                </div>-->
+                <div id="topHeader">
+                    <div id="welcomeMessage">Welcome: Kaushik</div>
+                    <div id='totalPlayers'></div>
+                </div>
+                <div id="midHeader">
+                    <div id="gameId"></div>
+                    <div id='playingWith'>Playing With:</div>
+                </div>
+                <div id="bottomHeader">
+                    <marquee id='playerCount'></marquee>
+                </div>
+                <div id='child00' class='child'></div>
+                <div id='child01' class='child'></div>
+                <div id='child02' class='child'></div>
+                <div id='child10' class='child'></div>
+                <div id='child11' class='child'></div>
+                <div id='child12' class='child'></div>
+                <div id='child20' class='child'></div>
+                <div id='child21' class='child'></div>
+                <div id='child22' class='child'></div>
+                <div id='winner'></div>
+                <button id="playAgain">Play Again</button>
+            </div>
+            <div id="lobby">
+                <p>Lobby</p>
+                <div id="content">
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/nameList.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/player.js"></script>
+    </body>
+</html>
