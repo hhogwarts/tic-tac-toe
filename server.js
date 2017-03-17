@@ -62,10 +62,10 @@ var server = http.createServer(function(request, response){
     // console.log('player name: ' + request.handshake.query);
 });
 
-console.log('server is running in 8081');
 var io = require('socket.io').listen(server);
 
-server.listen(8081);
+server.listen(process.env.PORT || 8081);
+console.log('server is running in 8081');
 io.sockets.on('connection', onSocketConnection);
 
 function onSocketConnection(socket){

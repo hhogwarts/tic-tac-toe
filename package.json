@@ -3,7 +3,11 @@
   "author": "Kaushik",
   "private": true,
   "engines": {
-  	"node": "5.9.1"
+  	"node": "6.5.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "latest",
