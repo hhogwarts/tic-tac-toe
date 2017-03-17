@@ -2,6 +2,9 @@
   "name": "tic-tac-toe",
   "author": "Kaushik",
   "private": true,
+  "engines": {
+  	"node": "5.9.1"
+  },
   "dependencies": {
     "express": "latest",
     "node-static": "latest",

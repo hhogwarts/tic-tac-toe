@@ -1,0 +1,37 @@
+To login Heroku
+	heroku login
+
+Getting app from GIT
+	git clone https://github.com/heroku/node-js-getting-started.git
+	cd node-js-getting-started
+
+Creating a new app
+	heroku create
+	git push heroku master
+	heroku ps:scale web=1
+
+Opening app
+	heroku open
+
+Run the app locally
+	 heroku local web
+
+View Logs
+	heroku logs --tail
+
+Procfile
+	web: node index.js
+
+To check no of dynos
+	heroku ps
+
+To Run in local
+	heroku local web
+
+
+Commit on Heroku
+	git add .
+	git commit -m "updated"
+	git push heroku master
+
+heroku open cool
