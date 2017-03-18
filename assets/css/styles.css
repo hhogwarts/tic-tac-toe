@@ -1,9 +1,14 @@
-#parent{
+#parent, #intro{
     width: 340px;
     height: 430px;
     box-shadow: 0px 0px 16px black;
     float: left;
     position: relative;
+}
+#intro{
+    position: absolute;
+    background-color: #eeeeee;
+    overflow: hidden;
 }
 .child{
     width: 100px;
@@ -108,4 +113,59 @@
     display: none;
     margin-top: 238px;
     position: absolute;
+}
+input[type=text], select {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 5%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=text]:hover {
+    border: 1px solid #555;
+}
+
+input[type=button] {
+    width: 90%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 5%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #45a049;
+}
+
+#intro div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.slidein {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    /*margin-left:0%;*/
+    width: 340px;
+    opacity: 1;
+    height: 100%;
+  }
+  
+  to {
+    /*margin-left:100%;*/
+    width: 0%;
+    opacity: 0;
+    height: 0;
+  }
 }

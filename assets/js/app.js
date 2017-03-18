@@ -1,10 +1,23 @@
 var localPlayer;
 var remotePlayers = {};
-var playerName = makeName();
 var url = window.location.origin;
-var socket = io.connect(url, {query: 'name=' + playerName});
+var socket;
 var canPlay = false;
 var totalPlayers = 0;
+var connectionStarted = false;
+var playerName = '';
+
+function connectToSocket(){
+    if(connectionStarted) return;
+    connectionStarted = true;
+    playerName = document.getElementById('playerName').value;
+    if(playerName === '')
+        playerName = "Player";
+    // console.log(this);
+    // console.log(name);
+    socket = io.connect(url, {query: 'name=' + playerName});
+    setEventHandlers();
+}
 
 function setEventHandlers(){
     socket.on("disconnect", onSocketDisconnect);
@@ -17,12 +30,16 @@ function setEventHandlers(){
     socket.on("my id", onMyId);
     addGameEvents();
 };
-setEventHandlers();
 
 function onSocketDisconnect() {
     console.log("Disconnected from socket server");
 };
 function onMyId(data){
+    var e = document.getElementById("intro");
+    e.addEventListener("animationstart", listener, false);
+    e.addEventListener("animationend", listener, false);
+    e.addEventListener("animationiteration", listener, false);
+    e.className = "slidein";
     console.log("got my Id from server: "+data.id);
     var newPlayer = new Player();
     newPlayer.id = data.id;

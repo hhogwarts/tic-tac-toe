@@ -25,6 +25,15 @@
             };
          });
       </script>-->
+        <script>
+            function listener(e) {
+                switch(e.type) {
+                    case "animationend":
+                        document.getElementById('intro').style.display = "none";
+                    break;
+                }
+            }
+        </script>
         <div id="container">
             <div id='parent' class="disabled">
                 <!--<div ng-app = "mainApp" ng-controller = "studentController">
@@ -55,6 +64,10 @@
                 <div id='child22' class='child'></div>
                 <div id='winner'></div>
                 <button id="playAgain">Play Again</button>
+            </div>
+            <div id="intro">
+                <input id="playerName" type="text" placeholder="Enter your name.." required/>
+                <input type="button" value="Play" onclick="connectToSocket()">
             </div>
             <div id="lobby">
                 <p>Lobby</p>
